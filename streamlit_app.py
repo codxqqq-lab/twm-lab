@@ -292,12 +292,6 @@ def technical_state(nodes: list[int], edges: list[int]) -> None:
 
 def main() -> None:
     inject_css()
-    try:
-        hashes = trusted_hashes()
-    except Exception as exc:
-        st.error(f"Не удалось подготовить канонические веса или проверить целостность: {exc}")
-        st.stop()
-
     st.markdown(
         """
         <div class="hero">
@@ -309,6 +303,13 @@ def main() -> None:
         """,
         unsafe_allow_html=True,
     )
+    try:
+        with st.spinner("Проверяем канонические веса и целостность модели…"):
+            hashes = trusted_hashes()
+    except Exception as exc:
+        st.error(f"Не удалось подготовить канонические веса или проверить целостность: {exc}")
+        st.stop()
+
     mode = st.radio(
         "Режим",
         MODES,
@@ -503,7 +504,7 @@ def main() -> None:
             "из синтетического мира."
         )
         if not st.session_state.get("fact_revealed", False):
-            if st.button("Показать, что произошло на самом деле", use_container_width=True):
+            if st.button("Показать сохранённый фактический исход", use_container_width=True):
                 st.session_state.fact_revealed = True
                 st.rerun()
         else:
