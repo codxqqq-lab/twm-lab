@@ -1,0 +1,27 @@
+{
+  "master_archive": "TWM_CURRENT_ARCHITECTURE_MASTER_SNAPSHOT_R13_CANONICAL_POST_AUDIT_R17E1_RECORD_2026-09-23.zip",
+  "code_source": "VALIDATED_ROLLOUT_R13/FROZEN_PACKAGE/src",
+  "checkpoint_source": "VALIDATED_ROLLOUT_R13/FROZEN_PACKAGE/checkpoints",
+  "observation_source": "VALIDATED_ROLLOUT_R13/FROZEN_PACKAGE/data/rollout_fresh.jsonl",
+  "examples": [
+    {"file":"examples/station_7.json","archive_row_id":"rollout_F3_G0_0080","n_nodes":7},
+    {"file":"examples/station_8.json","archive_row_id":"rollout_F1_G4_0022","n_nodes":8},
+    {"file":"examples/station_9.json","archive_row_id":"rollout_F0_G3_0088","n_nodes":9},
+    {"file":"examples/station_10.json","archive_row_id":"rollout_F4_G1_0014","n_nodes":10}
+  ],
+  "sha256": {
+    "weights/R12A_seed17_step5000.pt": "c673df97ca82e7db2fc35414e06ce731b968c1326ab754a95bea945403ee26ad",
+    "weights/R12A_seed29_step5000.pt": "44113ca20699579cbbf634a88daaf4b0064d6fac9f922f825bc45b400bad0750",
+    "weights/R12A_seed43_step5000.pt": "7d195c30dbdc8c2729a1a471b1621f9066e79c2a6ce966eaf53cc9ac09e89209",
+    "weights/R12B_seed17.pt": "f2b9332661c32b0ff36663be77fa3f37f6b85b2419cb0adc2e799dea1fa2747b",
+    "weights/R12B_seed29.pt": "7473fc7eb30a14827eb7f55dd4882106fc75ce9a8dab8e8cfce489b31248ab98",
+    "weights/R12B_seed43.pt": "92fa1c3135399da93537b943394160163ddeb34503ad578e459c97d5db7dbc14",
+    "runtime/canonical/factor_model.py": "0bdb1bffe4e9d6b9f6fbd4f5f55c9a85949602cf42d66233bc8ccdedb4d5c589",
+    "runtime/canonical/separated_system_id.py": "607f0e62849040e1b32b973d662fec3451ad70343780dc1dcbe944f1824fc6f6",
+    "runtime/canonical/distilled_evidence_system_id.py": "40a9677f5efa80075ed7e51016f59556d33b6cb08f5ca86eed173fede537225a",
+    "examples/station_7.json": "c9b579bbaf54f112bd8f55e20606c6505e39a6fbf66200e5ae59534f17221e3c",
+    "examples/station_8.json": "d3c0760158a9e49901c786d8e9b080732b0a07d8eb60399299df9352c2ba86fc",
+    "examples/station_9.json": "622339289883a13894ba04f8a30e4a651fe2145d22ab86b980c8bf3f348b3d39",
+    "examples/station_10.json": "a2b95b21343abb0ba1df7d4a293edf8c77faff73923a1b233871ba039c7afc49"
+  }
+}
